@@ -2,6 +2,10 @@ const {Schema, model } = require('mongoose');
 
 const UsuarioSchema = Schema({
 
+    experto:{
+         type:Boolean,
+         default:false
+     },
     nombre:{
         type:String,
         required:true
@@ -18,7 +22,26 @@ const UsuarioSchema = Schema({
     online:{
         type:Boolean,
         default:false
-    }
+    },
+     tituloprofesional:{
+         type:String,
+    },
+    sobremi:{
+         type:String,
+
+     },
+     experiencia:{
+         type:String,
+
+     },
+     licenciasycertificaciones:{
+         type:String,
+
+     },
+     conocimientosyaptitudes:{
+         type:String,
+
+     }
 })
 
 UsuarioSchema.method('toJSON', function(){

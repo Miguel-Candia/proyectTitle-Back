@@ -21,6 +21,9 @@ const getUsuarios = async() =>{
     .find()
     .sort('-online');
 
+    console.log("ver"+usuarios);
+
+
     return usuarios;
 
 }
